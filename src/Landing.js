@@ -17,20 +17,20 @@ export default function Landing() {
         <h2 style={{ width: "80%", margin: 20 }}>
           Demo Basistechnologie für dig. FußgängerIS (WIP)
         </h2>
-        <a href='/topicmapWithNewLocator'>
+        <a href={process.env.PUBLIC_URL + "/topicmapWithNewLocator"}>
           <Card
             hoverable
             style={{ width: 240, margin: 20 }}
-            cover={<img alt='example' src='/locator.jpeg' />}
+            cover={<img alt='example' src={process.env.PUBLIC_URL + "/locator.jpeg"} />}
           >
             <Meta title='Standortvisualisierung' description='mit Richtungsanzeige' />
           </Card>
         </a>
-        <a href='/turnableTopicMap'>
+        <a href={process.env.PUBLIC_URL + "/turnableTopicMap"}>
           <Card
             hoverable
             style={{ width: 240, margin: 20 }}
-            cover={<img alt='example' src='/turnableMap.jpeg' />}
+            cover={<img alt='example' src={process.env.PUBLIC_URL + "/turnableMap.jpeg"} />}
           >
             <Meta title='TopicMap 3.0?' description='dreh- und kippbare Karte' />
           </Card>
