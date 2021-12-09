@@ -17,7 +17,7 @@ export default function Landing() {
         <h2 style={{ width: "80%", margin: 20 }}>
           Demo Basistechnologie für dig. FußgängerIS (WIP)
         </h2>
-        <a href={"/#/topicmapWithNewLocator"}>
+        <a href={process.env.PUBLIC_URL + "/#/topicmapWithNewLocator"}>
           <Card
             hoverable
             style={{ width: 240, margin: 20 }}
@@ -26,7 +26,7 @@ export default function Landing() {
             <Meta title='Standortvisualisierung' description='mit Richtungsanzeige' />
           </Card>
         </a>
-        <a href={"/#/turnableTopicMap"}>
+        <a href={process.env.PUBLIC_URL + "/#/turnableTopicMap"}>
           <Card
             hoverable
             style={{ width: 240, margin: 20 }}
