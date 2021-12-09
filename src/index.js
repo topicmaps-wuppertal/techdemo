@@ -4,14 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import LibreMap from "./LibreMap";
 import Landing from "./Landing";
 import "antd/dist/antd.css";
 import SensorMap from "./SensorMap";
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <div className='App'>
         <Routes>
           <Route path='/' element={<Landing></Landing>}></Route>
