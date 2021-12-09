@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/techdemo/static/css/main.bbb64409.chunk.css",
-    "main.js": "/techdemo/static/js/main.8c1b2f72.chunk.js",
-    "main.js.map": "/techdemo/static/js/main.8c1b2f72.chunk.js.map",
+    "main.js": "/techdemo/static/js/main.00c77895.chunk.js",
+    "main.js.map": "/techdemo/static/js/main.00c77895.chunk.js.map",
     "runtime-main.js": "/techdemo/static/js/runtime-main.2ed8226d.js",
     "runtime-main.js.map": "/techdemo/static/js/runtime-main.2ed8226d.js.map",
     "static/css/2.fd348800.chunk.css": "/techdemo/static/css/2.fd348800.chunk.css",
@@ -16,7 +16,7 @@
     "static/css/2.fd348800.chunk.css.map": "/techdemo/static/css/2.fd348800.chunk.css.map",
     "static/css/main.bbb64409.chunk.css.map": "/techdemo/static/css/main.bbb64409.chunk.css.map",
     "static/js/2.cb163a75.chunk.js.LICENSE.txt": "/techdemo/static/js/2.cb163a75.chunk.js.LICENSE.txt",
-    "static/js/main.8c1b2f72.chunk.js.LICENSE.txt": "/techdemo/static/js/main.8c1b2f72.chunk.js.LICENSE.txt",
+    "static/js/main.00c77895.chunk.js.LICENSE.txt": "/techdemo/static/js/main.00c77895.chunk.js.LICENSE.txt",
     "static/media/MeinStandpunktMarker.aec65d22.jpg": "/techdemo/static/media/MeinStandpunktMarker.aec65d22.jpg",
     "static/media/MeinStandpunktMarkerDoppel.e4a85271.jpg": "/techdemo/static/media/MeinStandpunktMarkerDoppel.e4a85271.jpg",
     "static/media/font-awesome.css": "/techdemo/static/media/fontawesome-webfont.f691f37e.woff",
@@ -28,6 +28,6 @@
     "static/css/2.fd348800.chunk.css",
     "static/js/2.cb163a75.chunk.js",
     "static/css/main.bbb64409.chunk.css",
-    "static/js/main.8c1b2f72.chunk.js"
+    "static/js/main.00c77895.chunk.js"
   ]
 }
