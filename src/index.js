@@ -11,7 +11,7 @@ import "antd/dist/antd.css";
 import SensorMap from "./SensorMap";
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className='App'>
         <Routes>
           <Route path='/' element={<Landing></Landing>}></Route>
