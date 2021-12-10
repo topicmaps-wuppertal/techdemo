@@ -9,6 +9,7 @@ import LibreMap from "./LibreMap";
 import Landing from "./Landing";
 import "antd/dist/antd.css";
 import SensorMap from "./SensorMap";
+import Klima from "./klima/App";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -21,6 +22,7 @@ ReactDOM.render(
           <Route path='/topicmapWithNewLocator' element={<App />}></Route>
 
           <Route path='/sensorDemo' element={<SensorMap />}></Route>
+          <Route path='/qrklima' element={<Klima />}></Route>
         </Routes>
       </div>
     </Router>

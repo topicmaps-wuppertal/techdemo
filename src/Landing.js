@@ -35,6 +35,15 @@ export default function Landing() {
             <Meta title='TopicMap 3.0?' description='dreh- und kippbare Karte' />
           </Card>
         </a>
+        <a href={process.env.PUBLIC_URL + "/#/qrklima"}>
+          <Card
+            hoverable
+            style={{ width: 240, margin: 20 }}
+            cover={<img alt='example' src={process.env.PUBLIC_URL + "/qrklima.jpeg"} />}
+          >
+            <Meta title='Klimastandorte' description='QR Code enabled' />
+          </Card>
+        </a>
         {/* <a href='/sensorDemo'>
           <Card
             hoverable

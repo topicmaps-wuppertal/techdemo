@@ -15,5 +15,11 @@ mit Richtungsanzeige
 dreh- und kippbare Karte
 
 <a href="https://topicmaps-wuppertal.github.io/techdemo/#/turnableTopicMap">
-<img width="300" alt="locator" src="https://topicmaps-wuppertal.github.io/techdemo/turnableMap.jpeg">
+<img width="300" alt="turnableMap" src="https://topicmaps-wuppertal.github.io/techdemo/turnableMap.jpeg">
+</a>
+
+## Klimastandort mit QR Code Funktionalität
+
+<a href="https://topicmaps-wuppertal.github.io/techdemo/#/qrklima?linkProduction">
+<img width="300" alt="qrklima" src="https://topicmaps-wuppertal.github.io/techdemo/qrklima.jpeg">
 </a>
