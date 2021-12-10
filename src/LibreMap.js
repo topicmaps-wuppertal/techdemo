@@ -57,6 +57,29 @@ export default function Map(props = { opacity: 0.1 }) {
         },
         "waterway-name"
       );
+      map.current.addLayer(
+        {
+          id: "3d-buildings",
+          source: "openmaptiles",
+          "source-layer": "building",
+
+          type: "fill-extrusion",
+          minzoom: 15,
+          paint: {
+            "fill-extrusion-color": "#aaa",
+            "fill-extrusion-height": {
+              type: "identity",
+              property: "render_height",
+            },
+            "fill-extrusion-base": {
+              type: "identity",
+              property: "render_min_height",
+            },
+            "fill-extrusion-opacity": 0.6,
+          },
+        },
+        "waterway-name"
+      );
 
       map.current.setPaintProperty("wms-test-layer", "raster-opacity", 0.5);
     });
