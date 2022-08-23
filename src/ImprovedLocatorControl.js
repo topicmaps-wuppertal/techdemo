@@ -20,6 +20,8 @@ export default class Control extends MapControl {
       locateOptions: {
         enableHighAccuracy: true,
       },
+      showCompass: true,
+      setView: "always",
       ...options,
     };
 

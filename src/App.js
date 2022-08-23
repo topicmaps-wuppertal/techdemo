@@ -18,6 +18,7 @@ import getGTMFeatureStyler from "react-cismap/topicmaps/generic/GTMStyler";
 import ImprovedLocatorControl from "./ImprovedLocatorControl";
 
 import StyledWMSTileLayer from "react-cismap/StyledWMSTileLayer";
+import { defaultLayerConf } from "react-cismap/tools/layerFactory";
 const host = "https://wupp-topicmaps-data.cismet.de";
 
 const getGazData = async (setGazData) => {
@@ -41,13 +42,67 @@ const getGazData = async (setGazData) => {
   setGazData(gazData);
 };
 
+const backgroundModes = [
+  {
+    title: "Stadtplan",
+    mode: "default",
+    layerKey: "stadtplan",
+  },
+  {
+    title: "Stadtplan (Vektordaten )",
+    mode: "default",
+    layerKey: "vector2",
+  },
+  {
+    title: "Stadtplan (Vektordaten light)",
+    mode: "default",
+    layerKey: "vector",
+  },
+
+  { title: "Luftbildkarte", mode: "default", layerKey: "lbk" },
+];
+const backgroundConfigurations = {
+  lbk: {
+    layerkey: "cismetText|trueOrtho2020@40",
+    layerkey_: "wupp-plan-live@100|trueOrtho2020@75|rvrSchrift@100",
+    src: "/images/rain-hazard-map-bg/ortho.png",
+    title: "Luftbildkarte",
+  },
+  stadtplan: {
+    layerkey: "wupp-plan-live@60",
+    src: "/images/rain-hazard-map-bg/citymap.png",
+    title: "Stadtplan",
+  },
+  vector: {
+    layerkey: "cismetLight",
+    src: "/images/rain-hazard-map-bg/citymap.png",
+    title: "Stadtplan",
+  },
+  vector2: {
+    layerkey: "OMT_OSM_bright",
+    src: "/images/rain-hazard-map-bg/citymap.png",
+    title: "Stadtplan",
+  },
+};
+const baseLayerConf = { ...defaultLayerConf };
+
+baseLayerConf.namedLayers.cismetLight = {
+  type: "vector",
+  style: "https://omt.map-hosting.de/styles/cismet-light/style.json",
+  pane: "backgroundvectorLayers",
+};
+
 function App() {
   const [gazData, setGazData] = useState([]);
   useEffect(() => {
     getGazData(setGazData);
   }, []);
   return (
-    <TopicMapContextProvider>
+    <TopicMapContextProvider
+      baseLayerConf={baseLayerConf}
+      backgroundConfigurations={backgroundConfigurations}
+      backgroundModes={backgroundModes}
+    >
       <TopicMapComponent locatorControl={false} gazData={gazData}>
         <ImprovedLocatorControl />
       </TopicMapComponent>
