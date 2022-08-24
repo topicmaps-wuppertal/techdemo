@@ -21,7 +21,8 @@ export default class Control extends MapControl {
         enableHighAccuracy: true,
       },
       showCompass: true,
-      setView: "always",
+      setView: "untilPan",
+      keepCurrentZoomLevel: "true",
       ...options,
     };
 
