@@ -23,6 +23,7 @@ export default class Control extends MapControl {
       showCompass: true,
       setView: "untilPan",
       keepCurrentZoomLevel: "true",
+      flyTo: true,
       ...options,
     };
 

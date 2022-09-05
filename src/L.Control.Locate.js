@@ -315,7 +315,26 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
       },
       /** This event is called in case of any location error that is not a time out error. */
       onLocationError(err, control) {
-        alert(err.message);
+        console.log("xxxy error", err);
+        try {
+          const onSuccess = (e) => {
+            console.log("sucess", e);
+          };
+          const onError = (e) => {
+            console.log("error", e);
+          };
+          console.log(
+            "try again",
+            navigator.geolocation.getCurrentPosition(onSuccess, onError, {
+              enableHighAccuracy: true,
+              timeout: 1000,
+            })
+          );
+        } catch (e) {
+          console.log("e e e", e);
+        }
+
+        alert("xxx" + err.message);
       },
       /**
        * This event is called when the user's location is outside the bounds set on the map.
@@ -524,6 +543,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         this._map.on("dragstart", this._onDrag, this);
         this._map.on("zoomstart", this._onZoom, this);
         this._map.on("zoomend", this._onZoomEnd, this);
+
         if (this.options.showCompass) {
           const oriAbs = "ondeviceorientationabsolute" in window;
           if (oriAbs || "ondeviceorientation" in window) {

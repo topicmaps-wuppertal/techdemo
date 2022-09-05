@@ -8,7 +8,7 @@ import "react-bootstrap-typeahead/css/Typeahead.css";
 import "react-cismap/topicMaps.css";
 import { md5FetchText, fetchJSON } from "react-cismap/tools/fetching";
 import { getGazDataForTopicIds } from "react-cismap/tools/gazetteerHelper";
-
+import LogConsole from "react-cismap/tools/LogConsole";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import { getClusterIconCreatorFunction } from "react-cismap/tools/uiHelper";
 import TopicMapComponent from "react-cismap/topicmaps/TopicMapComponent";
@@ -16,7 +16,6 @@ import FeatureCollection from "react-cismap/FeatureCollection";
 import GenericInfoBoxFromFeature from "react-cismap/topicmaps/GenericInfoBoxFromFeature";
 import getGTMFeatureStyler from "react-cismap/topicmaps/generic/GTMStyler";
 import ImprovedLocatorControl from "./ImprovedLocatorControl";
-
 import StyledWMSTileLayer from "react-cismap/StyledWMSTileLayer";
 import { defaultLayerConf } from "react-cismap/tools/layerFactory";
 const host = "https://wupp-topicmaps-data.cismet.de";
@@ -96,15 +95,22 @@ function App() {
   const [gazData, setGazData] = useState([]);
   useEffect(() => {
     getGazData(setGazData);
+    // consolere.connect({ server: "http://localhost:8088", channel: "test" });
   }, []);
+
   return (
     <TopicMapContextProvider
       baseLayerConf={baseLayerConf}
       backgroundConfigurations={backgroundConfigurations}
       backgroundModes={backgroundModes}
     >
-      <TopicMapComponent locatorControl={false} gazData={gazData}>
-        <ImprovedLocatorControl />
+      <TopicMapComponent locatorControl={true} gazData={gazData}>
+        <LogConsole
+          style={{ textAlign: "left" }}
+          ghostModeAvailable={true}
+          minifyAvailable={true}
+        />
+        {/* <ImprovedLocatorControl /> */}
       </TopicMapComponent>
     </TopicMapContextProvider>
   );
