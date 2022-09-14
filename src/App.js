@@ -105,11 +105,11 @@ function App() {
       backgroundModes={backgroundModes}
     >
       <TopicMapComponent locatorControl={true} gazData={gazData}>
-        <LogConsole
+        {/* <LogConsole
           style={{ textAlign: "left" }}
           ghostModeAvailable={true}
           minifyAvailable={true}
-        />
+        /> */}
         {/* <ImprovedLocatorControl /> */}
       </TopicMapComponent>
     </TopicMapContextProvider>
