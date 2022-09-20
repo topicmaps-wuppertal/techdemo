@@ -1,10 +1,15 @@
 import React, { useRef, useEffect, useState } from "react";
-import maplibregl from "maplibre-gl";
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import maplibregl from "!maplibre-gl";
+import maplibreglWorker from "maplibre-gl/dist/maplibre-gl-csp-worker";
+
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./mapLibre.css";
 import { Button } from "react-bootstrap";
+import { Map } from "maplibre-gl";
+maplibregl.workerClass = maplibreglWorker;
 
-export default function Map(props = { opacity: 0.1 }) {
+export default function LibreMap(props = { opacity: 0.1 }) {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [lng] = useState(7.150764);
