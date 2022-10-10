@@ -24,7 +24,10 @@ export default function LibreMap(props = { opacity: 0.1 }) {
     if (map.current) return;
     map.current = new maplibregl.Map({
       container: mapContainer.current,
-      style: `https://omt.map-hosting.de/styles/osm-bright/style.json`,
+      // style: `https://omt.map-hosting.de/styles/osm-bright/style.json`,
+      // style: `https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_col.json`,
+      style: `https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_top.json`,
+      // style: `https://sgx.geodatenzentrum.de/gdz_basemapde_vektor/styles/bm_web_gry.json`,
       center: [lng, lat],
       zoom: zoom,
       opacity: 0.5,
@@ -132,7 +135,6 @@ export default function LibreMap(props = { opacity: 0.1 }) {
   return (
     <div className='map-wrap'>
       <div ref={mapContainer} className='map' />
-      <Button>askdjh</Button>
     </div>
   );
 }

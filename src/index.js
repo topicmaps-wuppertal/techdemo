@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import LibreMap from "./LibreMap";
+import LibreMap2 from "./LibreMap2";
 import Landing from "./Landing";
 import "antd/dist/antd.css";
 import SensorMap from "./SensorMap";
@@ -18,6 +19,7 @@ ReactDOM.render(
           <Route path='/' element={<Landing></Landing>}></Route>
 
           <Route path='/turnableTopicMap' element={<LibreMap />}></Route>
+          <Route path='/turnableTopicMap2' element={<LibreMap2 />}></Route>
 
           <Route path='/topicmapWithNewLocator' element={<App />}></Route>
 
